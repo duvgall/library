@@ -22,9 +22,9 @@ addBtn.addEventListener('click', function(event) {
     let finished = document.getElementById('finished');
 
     if (finished.checked === true) {
-        finished.value = 'read';
+        finished.value = 'Read';
     } else {
-        finished.value = 'not read';
+        finished.value = 'Not read';
     }; 
     finished = finished.value;
     const newBook = new Book(title, author, pages, finished)
@@ -50,23 +50,6 @@ function Book(title, author, pages, finished) {
 
 let myLibrary = []
 
-/*function addBookToLibrary() {
-    let newBook = new Book(title, author, pages, finished);
-    myLibrary.push(newBook);
-    console.log(myLibrary);
-}*/
-
-/*function addBook() {
-   
-    let title = document.getElementById('title').value;
-    let author = document.getElementById('author').value;
-    let pages = document.getElementById('pages').value;
-    let finished = document.getElementById('finished').value;
-
-    const newBook = new Book(title, author, pages, finished)
-    myLibrary.push(newBook);
-    console.log(myLibrary);
-}*/
 
 function resetForm() {
     form.reset();
@@ -100,9 +83,6 @@ function createLibraryEntry() {
         authorBox.textContent = (myLibrary[i].author);
         pagesBox.textContent = (myLibrary[i].pages);
         readBox.textContent = (myLibrary[i].finished);
-        console.log(titleBox.textContent);
-        console.log(authorBox.textContent);
-
 
         deleteBtn.addEventListener('click', deleteTile, false)
 
@@ -118,10 +98,10 @@ function deleteTile(e) {
 
 function toggleReadStatus(e) {
     
-    if(readBox.textContent === 'read') {
-        readBox.textContent = 'not read';
+    if(readBox.textContent === 'Read') {
+        readBox.textContent = 'Not read';
     } else {
-        readBox.textContent = 'read';
+        readBox.textContent = 'Read';
     }
 }
 
