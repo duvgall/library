@@ -5,6 +5,7 @@ let libraryContainer = document.getElementById('library-container');
 let deleteBtn;
 let toggleReadBtn;
 let tile;
+let readBox;
 
 newBtn.addEventListener('click', () => form.style.display = 'block');
 
@@ -72,12 +73,9 @@ function resetForm() {
 }
 
 function createLibraryEntry() {
-    let tile;
     let titleBox;
     let authorBox;
     let pagesBox;
-    let readBox;
-    let deleteBtn;
     for(let i = 0; i < myLibrary.length; i++) {
         tile = document.createElement('div');
         tile.setAttribute('id', `book'${i}`)
@@ -108,7 +106,7 @@ function createLibraryEntry() {
 
         deleteBtn.addEventListener('click', deleteTile, false)
 
-        toggleReadBtn.addEventListener('click', toggleReadStatus);
+        toggleReadBtn.addEventListener('click', toggleReadStatus, false);
 
     }
 }
@@ -118,12 +116,12 @@ function deleteTile(e) {
     myLibrary.splice(myLibrary.indexOf(this.parentNode, 1));
 }
 
-function toggleReadStatus() {
+function toggleReadStatus(e) {
     
-    if(readbox.textContent === 'read') {
-        readbox.textContent === 'not read';
+    if(readBox.textContent === 'read') {
+        readBox.textContent = 'not read';
     } else {
-        readbox.textContent === 'read';
+        readBox.textContent = 'read';
     }
 }
 
