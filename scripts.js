@@ -66,9 +66,15 @@ function createLibraryEntry() {
         authorBox = document.createElement('p');
         pagesBox = document.createElement('p');
         readBox = document.createElement('p');
+        titleBox.classList.add('tile-container');
+        authorBox.classList.add('tile-container');
+        pagesBox.classList.add('tile-container');
+        readBox.classList.add('tile-container');
         toggleReadBtn = document.createElement('button');
+        toggleReadBtn.classList.add('book-btn');
         deleteBtn = document.createElement('button');
         deleteBtn.setAttribute('id', 'deleteBtn');
+        deleteBtn.classList.add('book-btn');
         libraryContainer.appendChild(tile);
         tile.classList.add('book');
         tile.appendChild(titleBox);

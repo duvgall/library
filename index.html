@@ -8,19 +8,19 @@
 </head>
 <body>
     <div class="new-btn-container">
-        <button id="new-btn">+ New Book</button>
+        <button id="new-btn" class="btn">+ New Book</button>
     </div>
 
     <div id="form-container">
     <form id="form">
-        <p> <input type="text" id="title" name="title" placeholder="Title" required></p>
-        <p><input type="text" id="author" name="author" placeholder="Author" required></p>
-        <p> <input type="number" id="pages" name="pages" placeholder="Pages" required> </p>
+        <p> <input type="text" id="title" class = "form-input" name="title" placeholder="Title" required></p>
+        <p><input type="text" id="author" class = "form-input"  name="author" placeholder="Author" required></p>
+        <p> <input type="number" id="pages" class = "form-input"  name="pages" placeholder="Pages" required> </p>
         <p>
-            <label name="finished">Read?</label>
-            <input type="checkbox" id="finished" name="finished" value="">
+            <label name="finished" class="checkbox">Read?</label>
+            <input type="checkbox" id="finished" class="checkbox-size" name="finished" value="">
         </p>
-        <button type="button" form="form" id="add-book">Add Book</button>
+        <button type="button" form="form" id="add-book" class="btn">Add Book</button>
     </form>
     </div>
     <div id="library-container">

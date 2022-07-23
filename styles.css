@@ -2,20 +2,47 @@
     display: none;
     text-align: center;
     background-color: aquamarine;
-    width: 300px;
+    width: 350px;
     height: 100%;
+    border-radius: 10px;
+    border: 3px solid gray;
 }
 
 
 #form-container {
-    
     background-color: brown;
-    height: 300px;
+    height: 350px;
     width: 100%;
     display: flex;
     justify-content: center;
     
 }
+
+.form-input {
+    padding: 5px 5px 5px 5px;
+    border: 1px solid black;
+    font-size: x-large;
+}
+
+.btn {
+    padding: 10px 15px 10px 15px;
+    border: 1px solid gray;
+    background-color: blue;
+    color: whitesmoke;
+    border-radius: 8px;
+    font-size: x-large;
+
+}
+
+.checkbox {
+    font-size: x-large;
+}
+
+.checkbox-size {
+    width: 20px;
+    height: 20px;
+}
+
 
 .new-btn-container {
     height: 100px;
@@ -36,9 +63,23 @@
 
 .book {
     color: black;
-    background-color: azure;
+    background-color: beige;
     width: 250px;
     height: 270px;
     margin: 20px 10px 20px 10px;
     padding: 15px 10px 5px 10px;
+    border-radius: 10px;
+    box-shadow: 8px 5px 5px gray;
+    border: 1px solid black;
+}
+
+.tile-container {
+    font-size: large;
+}
+
+.book-btn {
+    padding: 5px 10px 5px 10px;
+    border: 1px solid black;
+    margin: 0px 10px 0px 10px;
+    font-size: large;
 }
