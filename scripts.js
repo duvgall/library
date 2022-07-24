@@ -62,37 +62,44 @@ function createLibraryEntry() {
     for(let i = 0; i < myLibrary.length; i++) {
         tile = document.createElement('div');
         tile.setAttribute('id', `book'${i}`)
-        titleBox = document.createElement('p');
-        authorBox = document.createElement('p');
-        pagesBox = document.createElement('p');
-        readBox = document.createElement('p');
+        titleBox = document.createElement('div');
+        authorBox = document.createElement('div');
+        pagesBox = document.createElement('div');
+        readBox = document.createElement('div');
+        readStatus = document.createElement('div');
+        toggleBtnContainer = document.createElement('div');
         titleBox.classList.add('tile-container');
         authorBox.classList.add('tile-container');
         pagesBox.classList.add('tile-container');
-        readBox.classList.add('tile-container');
+        readBox.classList.add('read-box');
+        readBox.setAttribute('id', `readBox${i}`)
         toggleReadBtn = document.createElement('button');
         toggleReadBtn.classList.add('book-btn');
+        toggleReadBtn.setAttribute('id', 'toggleBtn');
+        toggleReadBtn.setAttribute('type', 'button');
         deleteBtn = document.createElement('button');
         deleteBtn.setAttribute('id', 'deleteBtn');
         deleteBtn.classList.add('book-btn');
+        readBox.appendChild(toggleReadBtn);
         libraryContainer.appendChild(tile);
         tile.classList.add('book');
         tile.appendChild(titleBox);
         tile.appendChild(authorBox);
         tile.appendChild(pagesBox);
         tile.appendChild(readBox);
-        tile.appendChild(toggleReadBtn);
         tile.appendChild(deleteBtn);
         deleteBtn.textContent = 'Delete';
-        toggleReadBtn.textContent = "Read/ Not Yet"
+        toggleReadBtn.textContent = "Read?"
         titleBox.textContent = (myLibrary[i].title);
         authorBox.textContent = (myLibrary[i].author);
         pagesBox.textContent = (myLibrary[i].pages);
-        readBox.textContent = (myLibrary[i].finished);
+        readStatus.textContent = (myLibrary[i].finished);
 
         deleteBtn.addEventListener('click', deleteTile, false)
 
         toggleReadBtn.addEventListener('click', toggleReadStatus, false);
+
+        console.log(toggleReadBtn.textContent);
 
     }
 }
@@ -104,10 +111,10 @@ function deleteTile(e) {
 
 function toggleReadStatus(e) {
     
-    if(readBox.textContent === 'Read') {
-        readBox.textContent = 'Not read';
+    if(this.textContent === 'Read') {
+        this.textContent = 'Not read';
     } else {
-        readBox.textContent = 'Read';
+        this.textContent = 'Read';
     }
 }
 

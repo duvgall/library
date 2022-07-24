@@ -75,6 +75,7 @@
 
 .tile-container {
     font-size: large;
+    padding: 10px 0px 10px 0px;
 }
 
 .book-btn {
@@ -82,4 +83,17 @@
     border: 1px solid black;
     margin: 0px 10px 0px 10px;
     font-size: large;
+}
+
+.read-box {
+    height: 30px;
+    width: 100%;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 10px 0px;
+}
+
+.read-status {
+    align-self: left;
 }
