@@ -29,7 +29,6 @@ addBtn.addEventListener('click', function(event) {
     finished = finished.value;
     const newBook = new Book(title, author, pages, finished)
     myLibrary.push(newBook);
-    console.log(myLibrary);
     title = '';
     author = '';
     pages = '';
@@ -40,11 +39,14 @@ addBtn.addEventListener('click', function(event) {
     
 });
 
-function Book(title, author, pages, finished) {
+class Book {
+    
+    constructor(title, author, pages, finished) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.finished = finished;
+    }
     
 };
 
@@ -99,7 +101,6 @@ function createLibraryEntry() {
 
         toggleReadBtn.addEventListener('click', toggleReadStatus, false);
 
-        console.log(toggleReadBtn.textContent);
 
     }
 }
